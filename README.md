@@ -1,5 +1,5 @@
 # ThunderLabs
-This repo is created from Sandbox.io for implementing the assignment for Thunderlabs.
+This repo is created from [Code Sandbox](https://codesandbox.io) for implementing the [assignment for Thunderlabs.](https://codesandbox.io/s/github/NikJ87/ThunderLabs)
 
 
 # Getting Started with Create React App
