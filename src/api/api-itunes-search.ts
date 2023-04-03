@@ -8,7 +8,6 @@ export const api = async (
   setIsLoading: (data: boolean) => void,
   setHasSearched: (data: boolean) => void
 ) => {
-  console.log("ap icalling => ", { term });
   setHasSearched(false);
   if (term!.length < MinimumSearchChars) return;
 
@@ -17,7 +16,6 @@ export const api = async (
 
   const resultJson = await call(term, ApiSpec.itunes.search);
 
-  console.log("api itunes : ", resultJson);
   setHasSearched(true);
   setResults(resultJson?.results);
   setIsLoading(false);

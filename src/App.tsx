@@ -9,7 +9,7 @@ import {
   ShowMore,
   NoResultsText,
   ShowCount,
-  AlbumsList
+  AlbumsList,
 } from "./components";
 import { content, config, getIdentifiers } from "./commons";
 import { AppProvider } from "./context";
@@ -19,7 +19,7 @@ import {
   DebounceTime,
   LoadersCount,
   MinimumSearchChars,
-  IncrementBy
+  IncrementBy,
 } from "./api";
 import { debounce, isEmpty } from "lodash";
 
@@ -46,13 +46,9 @@ export default function App() {
   useEffect(() => {
     if (searchText?.length < MinimumSearchChars) return;
     debounceSearching();
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchText]);
 
   useEffect(() => {
-    console.log("result effect  : ", results);
-
     if (isEmpty(results)) {
       setActiveList([]);
       setLastIndex(CountZero);
