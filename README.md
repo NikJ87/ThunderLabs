@@ -13,7 +13,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [sandbox/ThunderLabs/itunes/search](https://d23u53-3000.csb.app/) to view it in your browser.
+Open [sandbox](https://codesandbox.io/p/github/NikJ87/ThunderLabs) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
