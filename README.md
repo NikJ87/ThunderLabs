@@ -1,5 +1,5 @@
 # ThunderLabs
-Created with CodeSandbox for assement prvided by Thunderlabs.
+This assignment implemted for Thunderlabs using Sandbox
 
 
 # Getting Started with Create React App
