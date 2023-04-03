@@ -1,5 +1,5 @@
 # ThunderLabs
-This assignment implemted for Thunderlabs using Sandbox
+This repo is created from Sandbox.io for implementing the assignment for Thunderlabs.
 
 
 # Getting Started with Create React App
