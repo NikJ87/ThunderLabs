@@ -80,25 +80,30 @@ export default function App() {
           <SearchButton onClick={onClickExec} />
         </SearchBar>
         <AlbumContainer>
-          <AlbumsList list={activeList} />
           {/* Lazy Loaders */}
           {isLoading &&
             [...Array(LoadersCount)].map((e: any, i: number) => (
               <LazyLoaders key={i} />
             ))}
 
-          {/* Display Count*/}
-          {IncrementBy < results?.length && (
-            <ShowCount currentCount={lastIndex} totalCount={results?.length} />
-          )}
-
-          {/* No results Found */}
-          {hasSearched &&
+          {isEmpty(results) ? (
+            hasSearched &&
             searchText?.length >= MinimumSearchChars &&
-            isEmpty(results) && <NoResultsText />}
-
-          {/* Show More */}
-          {lastIndex < results?.length && <ShowMore onClick={onShowMoreExec} />}
+            isEmpty(results) && <NoResultsText />
+          ) : (
+            <>
+              <AlbumsList list={activeList} />
+              {IncrementBy < results?.length && (
+                <ShowCount
+                  currentCount={lastIndex}
+                  totalCount={results?.length}
+                />
+              )}
+              {lastIndex < results?.length && (
+                <ShowMore onClick={onShowMoreExec} />
+              )}
+            </>
+          )}
         </AlbumContainer>
       </SearchLayout>
     </AppProvider>
