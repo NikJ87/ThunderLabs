@@ -3,7 +3,6 @@ This repo is created from [Code Sandbox](https://codesandbox.io) for implementin
 
 ## Github Repo
 [Repo NikJ87/ThunderLabs](https://github.com/NikJ87/ThunderLabs)
-
 ## Search Url
 [search iTunes](https://csb-59zb86.vercel.app/)
 
