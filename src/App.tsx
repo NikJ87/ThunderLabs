@@ -10,6 +10,7 @@ import {
   NoResultsText,
   ShowCount,
   AlbumsList,
+  IntroBanner,
 } from "./components";
 import { content, config, getIdentifiers } from "./commons";
 import { AppProvider } from "./context";
@@ -34,6 +35,7 @@ export default function App() {
 
   /** Ref Hooks */
   const debounceRef = useRef<any>();
+  const introRef = useRef<boolean>();
 
   const debounceSearching = () =>
     debounceRef.current(searchText, setResults, setIsLoading, setHasSearched);
@@ -46,6 +48,8 @@ export default function App() {
   useEffect(() => {
     if (searchText?.length < MinimumSearchChars) return;
     debounceSearching();
+
+    if (!introRef.current) introRef.current = true;
   }, [searchText]);
 
   useEffect(() => {
@@ -79,6 +83,7 @@ export default function App() {
           <SearchField onChange={onChangeExec} />
           <SearchButton onClick={onClickExec} />
         </SearchBar>
+        {!introRef.current && <IntroBanner />}
         <AlbumContainer>
           {/* Lazy Loaders */}
           {isLoading &&
