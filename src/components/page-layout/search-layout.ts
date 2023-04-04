@@ -5,6 +5,7 @@ import { tokens } from "../tokens";
 export const SearchLayout = styled.div`
   max-width: ${tokens.layout.container.width};
   margin: auto;
+  text-align: center;
 
   ${mediaMaxLg} {
     padding: 0 36px;
