@@ -5,7 +5,7 @@ This repo is created from [Code Sandbox](https://codesandbox.io) for implementin
 [Repo NikJ87/ThunderLabs](https://github.com/NikJ87/ThunderLabs)
 
 ### Search Url
-[search iTunes](https://csb-59zb86.vercel.app/)
+[search iTunes](https://thunderlabs-nik.vercel.app/)
 
 # Getting Started with Create React App
 
